@@ -1,0 +1,111 @@
+#main {
+    position: relative; /*important for the scrolling*/
+}
+.work {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+.work__title {
+    width: 100%;
+    justify-content: center;
+    color: var(--text);
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    padding: 0 8vw;
+}
+.work__title text {
+    text-align: center;
+    border-bottom: solid 4px var(--secondary-dark);
+}
+.work__pic {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 90%;
+    max-width: 90%;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    margin-bottom: 4vh;
+}
+.work__pic img {
+    object-fit: contain;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+.work__pic text {
+    color: var(--primary-dark);
+    background: var(--shadow);
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media all and (min-width: 768px) {
+    .work {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: auto;
+
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .work__title {
+        width: 100%;
+        justify-content: center;
+        color: var(--text);
+        margin-bottom: 4vw;
+        padding: 0 8vw;
+    }
+
+    .work__title text {
+        text-align: center;
+        border-bottom: solid 4px var(--secondary-dark);
+    }
+
+    .work__pic {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: auto;
+        width: 30%;
+        border-radius: 5%;
+        box-shadow: 0 0 2px var(--shadow);
+        overflow: hidden;
+    }
+    .work__pic img {
+        object-fit: contain;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    .work__pic text {
+        color: var(--primary);
+        background: var(--shadow);
+        position: absolute;
+        bottom: 0;
+        font-weight: 700;
+        width: 100%;
+        text-align: center;
+    }
+}

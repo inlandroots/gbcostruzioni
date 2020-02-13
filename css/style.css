@@ -1,0 +1,128 @@
+:root {
+    /* MATERIAL https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=EEEEEE&secondary.color=FF3D00&primary.text.color=000000 */
+    --primary: #eceff1;   
+    --primary-light: #ffffff;
+    --primary-dark: #babdbe;
+    --secondary: #ff6d00;
+    --secondary-light: #ff9e40;
+    --secondary-dark: #c43c00;
+    
+    --primary-s1: #eceff1ca;  
+    --primary-s2: #babdbeca;  
+
+    --background: #ffffff;
+    --text: #000000;
+    --shadow: #00000030;
+}
+
+/******* BACKGROUNDS ***/
+.bg-image {
+    background: url(../img/genova2-opt.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-background {
+    background-color: var(--background);
+}
+.bg-primary {
+    background-color: var(--primary);
+}
+.bg-primary-dark {
+    background-color: var(--primary-dark);
+}
+.bg-primary-light {
+    background-color: var(--primary-light);
+}
+.bg-secondary {
+    background-color: var(--secondary);
+}
+.bg-secondary-dark {
+    background-color: var(--secondary-dark);
+}
+.bg-secondary-light {
+    background-color: var(--secondary-light);
+}
+
+/******* MAIN ***/
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    height: auto;
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+#presentation {
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 90vh;
+    height: auto; 
+    padding: 0; 
+
+    background-color: var(--primary-s2);
+}
+
+#mq-hero-over {
+    display: none;
+}
+
+
+/******* FOOTER ***/
+#footer {
+    overflow: hidden;
+}
+#footer a {
+    color: var(--secondary-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+#footer a:hover {
+    color: var(--secondary);
+}
+#footer a:active {
+    color: var(--secondary-light);
+}
+
+#background-image {
+    background: url(../img/genova2-opt-768.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+/******* BUTTONS ***/
+.btn-action {
+    align-self: flex-end; 
+    cursor: pointer;
+    justify-content: space-around;
+    min-width: 50%; border-radius: 2px; color: var(--primary); 
+    border: none; 
+    font-size: 1.8rem; 
+    box-shadow: 0 0 4px var(--shadow);
+    background-color: var(--secondary);
+    padding: 0.2em 0em 0.2em 0.2em;  margin-bottom: 1rem;
+}
+.btn-action i {
+    margin-left: 0.2em;
+}
+.btn-action:hover {
+    box-shadow: 0 0 4px 0 inset var(--secondary-dark);
+}
+.btn-action:focus {
+    box-shadow: 0 0 4px 0 inset var(--secondary-dark);
+}
+.btn-action:active {
+    background-color: var(--secondary-dark);
+}

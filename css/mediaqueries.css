@@ -1,0 +1,49 @@
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) { 
+    
+} */
+
+/* Medium devices (tablets, 768px and up) */
+@media all and (min-width: 768px) { 
+    #mq-hero-under {
+        display: none;
+    }
+    #mq-hero-over {
+        display: flex;
+    }
+    #background-image {
+        background: none;
+    }
+
+    .bg-image {
+        background: url(../img/genova2-opt.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #main {
+        align-items: center;
+    }
+
+    #header {
+        width: 40vw;
+
+        font-size: 10vh;
+    }
+
+    #actions {
+        flex-direction: row;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */

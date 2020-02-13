@@ -1,0 +1,133 @@
+
+/* --- NAVIGATION BAR --- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+
+    min-width: 100vw;
+    box-shadow: 0 0 4vw var(--shadow);
+}
+.navbar--collapsed {
+    height: 10vh;
+}
+.navbar--expanded {
+    height: auto;
+}
+.navbar div {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 2vw;
+}
+
+.navbar__brand {
+    font-size: 5vh;
+    font-weight: 900;
+    opacity: 0.5;
+}
+.navbar__brand #logo {
+    cursor: pointer;
+}
+.navbar__brand #logo:active {
+    opacity: 0.4;
+}
+.navbar__button {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start !important;
+}
+.navbar__button a {
+    /* font-size: 1.6rem; */
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0.8;
+    padding-left: 1em;
+}
+.navbar__button.current {
+    cursor: default !important;
+}
+.navbar__button.current a {
+    font-weight: 700 !important;
+    border-left: solid 4px var(--secondary);
+}
+.navbar__button.disabled a {
+    color: var(--text);
+    cursor: default;
+    opacity: 0.2;
+}
+button.disabled {
+    cursor: pointer;
+    opacity: 0.2;
+}
+#expand-collapse {
+    position: absolute;
+    right: 0;
+    color: var(--secondary);
+    font-size: 6vh;
+}
+.navbar__button:hover a {
+    color: var(--secondary);
+    /* font-weight: 700; */
+    border-left: solid 4px var(--secondary);
+}
+.navbar__button:active {
+    opacity: 0.4;
+}
+.navbar__button.current:hover a {
+    color: var(--text);
+    border-left: solid 4px var(--secondary);
+}
+.navbar__button.current:active {
+    opacity: 1;
+}
+.navbar__button.disabled a:active {
+
+}
+
+.text--nav {
+    font-size: 1.6rem;
+    line-height: 160%;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media all and (min-width: 768px) { 
+    .navbar {
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        
+        min-height: 10vh;
+        min-width: 100vw;
+        z-index: 10;
+    }
+
+    .navbar__brand {
+        margin-right: auto;
+    }
+
+    .navbar__button {
+        width: auto;
+    }
+    
+    #expand-collapse {
+        display: none;
+    }
+
+    .text--nav {
+        font-size: 1.2rem;
+        line-height: 100%;
+    }
+}
