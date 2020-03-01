@@ -44,8 +44,9 @@
     max-width: 100%;
 }
 .work__pic text {
-    color: var(--primary-dark);
-    background: var(--shadow);
+    color: var(--secondary-dark);
+    background: var(--primary-s2);
+    text-shadow: 0 0 0.1em var(--shadow);
     position: absolute;
     bottom: 0;
     font-weight: 700;
@@ -101,7 +102,6 @@
     }
     .work__pic text {
         color: var(--primary);
-        background: var(--shadow);
         position: absolute;
         bottom: 0;
         font-weight: 700;
