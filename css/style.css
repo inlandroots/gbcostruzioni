@@ -72,7 +72,7 @@
     height: auto; 
     padding: 0; 
 
-    background-color: var(--primary-s2);
+    /* background-color: var(--primary-s2); */
 }
 
 #mq-hero-over {
