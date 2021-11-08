@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gallery - G&B Progetti e Costruzioni SRL</title>
+
+    <meta name="description" content="G&B Progetti e Costruzioni S.r.l. Genova: Edilizia, Ristrutturazioni, 
+    Piastrellatura, Stucchi, Vernici, Installazione Impianti. Preventivo Gratuito."/>
+    
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+
+    <link href="css/lavori.css" rel="stylesheet">
+
+    <link href="css/mediaqueries.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/navbar.js"></script>
+
+</head>
+
+<script>
+    window.addEventListener("load", function() {
+
+        document.getElementById("gallery").classList.add("current");
+
+    });
+
+    // ********** LAZY LOADING ****************
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    //lazyImage.srcset = lazyImage.dataset.srcset;
+                    lazyImage.classList.remove("lazy");
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+            });
+
+            lazyImages.forEach(function(lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Possibly fall back to a more compatible method here
+        }
+    });
+
+</script>
+
+<body>
+
+    <!-- **** NAVBAR **** -->
+
+    <div id="navbar" class="navbar navbar--collapsed no-select bg-primary">
+        <div class="navbar__brand">
+            <text id="logo" onclick="window.location.href = 'index.html';">G&B</text>
+        </div>
+        
+        <div id="expand-collapse">
+            <i class="fa fa-navicon"></i>
+        </div>
+        
+        <div id="home" class="navbar__button" onclick="window.location.href = 'index.html';">
+            <a class="text--nav">Home</a>
+        </div>
+        <div id="servizi" class="navbar__button" onclick="window.location.href = 'servizi.html';">
+            <a class="text--nav">Servizi</a>
+        </div>
+        <div id="lavori" class="navbar__button" onclick="window.location.href = 'lavori.html';">
+            <a class="text--nav">I nostri lavori</a>
+        </div>
+        <div id="gallery" class="navbar__button">
+            <a class="text--nav">Gallery</a>
+        </div>
+    </div>
+
+    <!-- ******** -->
+
+    <!-- **** MAIN **** -->
+
+    <div id="main" class="bg-primary-light">
+        <div class="col--center" style="height: auto; width: 100%;">
+            <div class="col add-padding" style="height: auto; width: 100%;">
+                <h1 class="text--xl" style="font-weight: 500; color: var(--text); text-align: left; height: auto; margin: 0; margin-top: 2em;">Una raccolta dei nostri lavori</h1>
+                <span class="text" style="font-weight: 300; margin-top: 2em;">
+                    Dai uno sguardo alla nostra gallery.
+                </span>
+            </div>
+        
+            <div class="col" style="height: auto; width: 100%;">
+
+                <div class="row work__title">
+                    <text class="text--l"></text>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-1.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-1-2.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-1-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-2.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-3.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-5.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-6.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-7.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-8.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-9.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-10.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-11.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-12.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-13.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-14.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-15.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-16.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-17.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-18.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-19.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-20.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-21.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-22.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-23.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-24.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-25.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-26.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-27.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-28.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-29.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-30.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-31.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-32.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-33.jpg" alt="">
+                    </div>
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-34.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mq gallery-row">
+                    <div class="mq work__pic">   
+                        <img class="lazy" src="img/default.png" 
+                        data-src="img/miste/GB-35.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- ******** -->
+
+    <!-- **** FOOTER **** -->
+    <footer id="footer" class="row bg-primary-dark" style="padding: 4vh; background-color: black; color: var(--primary-dark)">
+        <div class="row w-100" style="align-items: center;">
+            <div class="col w-50">
+                <text class="w-100" style="font-size: 0.8rem; line-height: 100%; text-align: left; font-style: italic;">
+                    Contattaci per un preventivo gratuito, creiamo progetti su misura a seconda di ogni necessità.
+                </text>
+                <div class="col w-100" style="margin-top: 4em;">
+
+                </div>
+            </div>
+            <div class="col w-50" style="color: var(--primary-dark);">
+                <text class="w-100" style="font-size: 1.6rem; font-weight: 700; line-height: 100%; text-align: right;">
+                    G&B
+                </text>
+                <text class="w-100" style="font-size: 0.8rem; font-weight: 700; line-height: 100%; text-align: right; margin-bottom: 0.5em;">
+                    Progetti e Costruzioni srl
+                </text>
+                <text class="w-100" style="font-size: 0.8rem; line-height: 100%; text-align: right;">Piazza Leonardo Da Vinci 5/3</text>
+                <text class="w-100" style="font-size: 0.8rem; line-height: 100%; text-align: right;">16149 Genova</text>
+            </div>            
+        </div>
+        <div class="row w-100" style="align-items: center;">
+            <div class="col w-100">
+                <a href="tel:+393206345722" style="font-size: 0.8rem; line-height: 120%; text-align: left;">+39 320 63 45 722</a>
+                <a href="tel:+393464903719" style="font-size: 0.8rem; line-height: 120%; text-align: left;">+39 346 49 03 719</a>
+                <a href="mailto:gbprogetticostruzionisrl@gmail.com?subject:'Richiesta Preventivo Gratuito' " style="font-size: 0.8rem; line-height: 120%; text-align: left;">gbprogetticostruzionisrl@gmail.com</a> 
+                <a href="mailto:gbprogetticostruzionisrl@pec.it?subject:'Richiesta Preventivo Gratuito' " style="font-size: 0.8rem; line-height: 120%; text-align: left; margin-bottom: 0.5em;">gbprogetticostruzionisrl@pec.it</a>
+            </div>            
+        </div>
+    </footer>
+    <!-- ******** -->
+
+</body>
+
+</html>
