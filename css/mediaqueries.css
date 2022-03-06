@@ -40,6 +40,15 @@ No media query for `xs` since this is the default in Bootstrap */
         flex-direction: row;
     }
 
+    #gallery-buttons {
+        flex-direction: row;
+        padding: 2em 4em !important;
+    }
+    .gallery__button {
+        min-width: 50% !important;
+        width: 50% !important;
+        max-width: 50% !important;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */

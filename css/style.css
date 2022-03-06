@@ -127,3 +127,19 @@
 .btn-action:active {
     background-color: var(--secondary-dark);
 }
+
+html {
+    /* Foreground, Background */
+    scrollbar-color: var(--secondary) none;
+}
+::-webkit-scrollbar {
+    width: 10px; /* Mostly for vertical scrollbars */
+    height: 10px; /* Mostly for horizontal scrollbars */
+}
+::-webkit-scrollbar-thumb { /* Foreground */
+    background: var(--secondary-light);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track { /* Background */
+    background: none;
+}
